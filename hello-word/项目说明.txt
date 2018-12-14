@@ -1,0 +1,4 @@
+1.vue create "文件名"，创建项目
+2.在根目录下创建vue.config.js,并配置该文件,详情见：https://blog.csdn.net/Allen_Fei_/article/details/82691420
+
+
