@@ -13,4 +13,15 @@
 文件丢失会直接在编译时报错，而不是到了用户端才产生 404 错误。
 最终生成的文件名包含了内容哈希，因此你不必担心浏览器会缓存它们的老版本。
 
+7.环境变量：参考：https://cli.vuejs.org/zh/guide/mode-and-env.html#%E6%A8%A1%E5%BC%8F
+.env.[mode]         # 只在指定的模式中被载入
 
+一个环境文件只包含环境变量的“键=值”对：例;.env.test2文件
+NODE_ENV=production
+VUE_APP_MODE=test2
+
+被载入的变量将会对 vue-cli-service 的所有命令、插件和依赖可用。
+
+8.在客户端侧代码中使用环境变量
+只有以 VUE_APP_ 开头的变量会被 webpack.DefinePlugin 静态嵌入到客户端侧的包中。
+你可以在应用的代码中这样访问它们：process.env.VUE_APP_MODE
